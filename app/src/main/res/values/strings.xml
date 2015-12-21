@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">GaijinJobs</string>
+
+    <!--Navigation drawer categories-->
+    <string name="title_category_all">All</string>
+    <string name="title_category_engineering">Engineering</string>
+    <string name="title_category_design">Design</string>
+    <string name="title_category_marketing">Marketing</string>
+    <string name="title_category_bookmarks">Bookmarks</string>
+
+    <string name="navigation_drawer_open">Open navigation drawer</string>
+    <string name="navigation_drawer_close">Close navigation drawer</string>
+    <string name="action_share">Share via</string>
+    <string name="action_can_bookmark">Bookmark article</string>
+    <string name="action_cannot_bookmark">Remove bookmark</string>
+
+    <string name="loading">Loading jobs!!</string>
+    <string name="load_error">Failed to load feed</string>
+    <string name="share_intent_subject">Gaijin Jobs Japan!!</string>
+
+    <!--For Bookmarks -->
+    <string name="addded_bookmark">Added to Bookmarks</string>
+    <string name="remove_bookmark">Removed from Bookmarks</string>
+
+    <!--For Status view -->
+    <string name="status_text">Failed to load content</string>
+    <string name="status_retry_text">Check your network connection and retry</string>
+    <string name="status_button_text">Reload</string>
+
+</resources>

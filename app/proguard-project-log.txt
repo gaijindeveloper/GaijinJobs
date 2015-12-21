@@ -1,0 +1,6 @@
+# Remove unnecessary log methods,
+# effectively disabling logging of their respective levels :
+-assumenosideeffects class android.util.Log {
+    public static int v(...);
+    public static int d(...);
+}

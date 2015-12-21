@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="job_categories">
+        <item>All</item>
+        <item>Engineering</item>
+        <item>Design</item>
+        <item>Marketing</item>
+        <item>Bookmarks</item>
+    </string-array>
+</resources>

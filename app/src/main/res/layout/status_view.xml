@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/Status"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/divider_color"
+    android:layout_centerVertical="true"
+    android:orientation="vertical"
+    android:clickable="true"
+    android:focusable="true"
+    android:visibility="visible">
+
+    <TextView
+        android:id="@+id/StatusText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginTop="30dp"
+        android:textStyle="bold"
+        android:gravity="center"
+        android:textColor="@color/primary_text_color"
+        android:textSize="18sp" />
+
+    <TextView
+        android:id="@+id/MessageText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginLeft="16dp"
+        android:layout_marginRight="16dp"
+        android:layout_marginTop="15dp"
+        android:gravity="center"
+        android:textColor="@color/secondary_text_color"
+        android:textSize="14sp" />
+
+    <Button
+        android:id="@+id/RefreshButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        style="@style/StatusButton"
+        android:layout_gravity="center"
+        android:layout_marginTop="20dp" />
+</LinearLayout>

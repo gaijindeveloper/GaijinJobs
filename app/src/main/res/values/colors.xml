@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <!--Material Pallette cyan/amber: http://www.materialpalette.com/amber/cyan-->
+    <color name="primary_color">#FFC107</color>
+    <color name="primary_color_light">#FFECB3</color>
+    <color name="primary_color_dark">#FFA000</color>
+    <color name="accent_color">#00BCD4</color>
+    <color name="primary_text_color">#212121</color>
+    <color name="secondary_text_color">#727272</color>
+    <color name="divider_color">#B6B6B6</color>
+
+    <!--For navigation drawer -->
+    <color name="navigation_drawer_background">#FFFFFF</color>
+    <color name="light_bg_interaction_color">#cccccc</color>
+
+    <!--For webview progress bar-->
+    <color name="progress_bar_light">#e8e8e8</color>
+    <color name="progress_bar_dark">#999999</color>
+
+    <!-- For ToolBar -->
+    <color name="toolbar_title_color">#FFFFFF</color>
+
+    <!--For Status button -->
+    <color name="basic_button_bg_interaction_color">#b2b2b2</color>
+    <color name="basic_button_bg_color">#cccccc</color>
+
+
+</resources>

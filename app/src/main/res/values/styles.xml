@@ -1,0 +1,17 @@
+<resources>
+
+    <!-- styling for ToolBar -->
+    <style name="GaijinToolBarStyle" parent="">
+        <item name="popupTheme">@style/ThemeOverlay.AppCompat.Light</item>
+        <item name="theme">@style/ThemeOverlay.AppCompat.Dark.ActionBar</item>
+    </style>
+
+    <!--styling for Status Button -->
+    <style name="StatusButton" parent="android:style/Widget.Material.Button">
+        <item name="android:textColor">@color/secondary_text_color</item>
+        <item name="android:textSize">18sp</item>
+        <item name="android:minHeight">48dp</item>
+        <item name="android:minWidth">200dp</item>
+    </style>
+
+</resources>

@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources xmlns:tools="http://schemas.android.com/tools"
+    tools:ignore="TypographyDashes,UnusedResources">
+
+    <!-- TODO: Replace placeholder ID with your tracking ID -->
+    <string name="ga_trackingId">UA-XXXXXX-XXXXX</string>
+
+    <!-- Enable automatic activity tracking -->
+    <bool name="ga_autoActivityTracking">true</bool>
+
+    <!-- Enable automatic exception tracking -->
+    <bool name="ga_reportUncaughtExceptions">false</bool>
+
+    <!-- Aliases for activities on Analytics dashboard -->
+    <screenName name="jp.gaijins.jobs.feed.HomeActivity">HomeActivity</screenName>
+    <screenName name="jp.gaijins.jobs.detail.JobDetailWebViewActivity">JobsDetailActivity</screenName>
+</resources>

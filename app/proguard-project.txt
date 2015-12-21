@@ -1,0 +1,82 @@
+# Proguard annotation settings
+-include libs/proguard_annotations.pro
+-keep interface proguard.annotation.*
+
+# Leave inner classes as such (don't flatten them) as we need this information
+# (checked reflectively at run-time), e.g. to validate variable naming during deserialization
+-keepattributes InnerClasses
+
+# Settings for serializable classes
+-keepnames class * implements java.io.Serializable
+-keepclassmembers class * implements java.io.Serializable {
+    static final long serialVersionUID;
+    private static final java.io.ObjectStreamField[] serialPersistentFields;
+    !static !transient <fields>;
+    private void writeObject(java.io.ObjectOutputStream);
+    private void readObject(java.io.ObjectInputStream);
+    java.lang.Object writeReplace();
+    java.lang.Object readResolve();
+}
+
+# Configuration for Gson serialization/deserialization
+# cf: http://code.google.com/p/google-gson/source/browse/trunk/examples/android-proguard-example/proguard.cfg?r=1077
+# Gson uses generic type information stored in a class file when working with fields. Proguard
+# removes such information by default, so configure it to keep all of it.
+-keepattributes Signature
+# For using GSON @Expose annotation
+-keepattributes *Annotation*
+# Gson specific classes
+-keep class sun.misc.Unsafe { *; }
+
+
+# Settings for injection
+-keep class com.google.inject.** { *; }
+-keep class javax.inject.** { *; }
+-keep class javax.annotation.** { *; }
+-keep class roboguice.** { *; }
+-dontwarn roboguice.activity.RoboMapActivity*
+-keepclassmembers class * {
+    # support field, constructor, and method injection:
+    # (if not specified here, those will be shrunk as their are mostly not called directly but by
+    # the DI framework)
+    @com.google.inject.Inject <init>(...);
+    @com.google.inject.Inject <fields>;
+    @com.google.inject.Inject <methods>;
+    @javax.inject.Inject <init>(...);
+    @javax.inject.Inject <fields>;
+    @javax.inject.Inject <methods>;
+    @javax.annotation.Nullable <fields>;
+    # keep all default constructors, for Guice to build objects without (injectable) constructors
+    # for injection ; there's no way in Proguard to say "keep all default constructors of classes
+    # with at least 1 @Inject annotation", so keep them all :
+    <init>();
+}
+
+-keep class * extends android.webkit.WebChromeClient {
+    public void openFileChooser(...);
+}
+
+-keepclassmembers public class android.support.v4.content.CursorLoader {
+    public <init>(android.content.Context);
+    public <init>(android.content.Context, android.net.Uri, java.lang.String[], java.lang.String, java.lang.String[], java.lang.String);
+}
+
+# Disable known compatible references to newer platforms
+-dontwarn **CompatGingerbread
+-dontwarn **CompatHoneycomb
+-dontwarn **CompatHoneycombMR2
+-dontwarn **CompatCreatorHoneycombMR2
+-dontwarn **CompatIcs*
+-dontwarn **CompatICS*
+-dontwarn **AccessibilityDelegateCompat*
+
+# Add filename and line number to stack traces
+# http://proguard.sourceforge.net/manual/examples.html#stacktrace
+-renamesourcefileattribute SourceFile
+-keepattributes SourceFile,LineNumberTable
+
+# For Picasso
+-dontwarn com.squareup.okhttp.**
+
+# For Actionbar Share
+-keep public class android.support.v7.widget.ShareActionProvider { *; }

@@ -22,9 +22,6 @@ tmp/
 # eclipse workspace configuration
 .metadata/
 
-# crashlytics build identifier
-main/res/values/com_crashlytics_export_strings.xml
-
 # Android Studio related
 .idea
 .gradle

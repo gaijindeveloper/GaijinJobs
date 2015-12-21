@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <!-- Toolbar as actionbar -->
+    <include
+        android:id="@+id/toolbar_actionbar"
+        layout="@layout/global_toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/toolbar_actionbar">
+
+        <fragment
+            android:id="@+id/jobs_detail_webview_fragment"
+            android:name="jp.gaijins.jobs.detail.JobDetailWebViewFragment"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" />
+
+        <ProgressBar
+            android:id="@+id/activity_bar"
+            style="?android:attr/progressBarStyleHorizontal"
+            android:layout_width="match_parent"
+            android:layout_height="4dip"
+            android:layout_gravity="center_horizontal|top"
+            android:indeterminate="false"
+            android:max="100"
+            android:progress="0"
+            android:progressDrawable="@drawable/jobs_webview_progressbar" />
+
+    </FrameLayout>
+</RelativeLayout>
